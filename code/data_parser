@@ -1,0 +1,16 @@
+# data_parser.py
+class DataParser:
+
+    def __init__(self, data):
+        self.data = data
+
+    def parse(self):
+        # Placeholder for parsing logic
+        parsed_data = self.data.split(',')
+        return parsed_data
+
+
+if __name__ == "__main__":
+    sample_data = "apple,banana,cherry"
+    parser = DataParser(sample_data)
+    print(parser.parse())
