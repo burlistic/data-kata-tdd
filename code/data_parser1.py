@@ -7,25 +7,15 @@ class DataParser:
     def __init__(self, data):
         self.data = data
 
-    def parse(self, stringinput : str):
+    def parse(self, param : str, stringinput : str):
         """ Parse Method"""
         # parsing logic
         parsed_result = []
+
+        if param == "l":
+            stringinput = stringinput.lower()
+
         split_input = stringinput.split(",")
-
-        for x in split_input:
-            if x == '""':
-                x = '"null"'
-
-            parsed_result.append(x.strip())
-
-        return parsed_result
-
-    def parse_to_lower(self, stringinput : str):
-        """ Parse Method"""
-        # parsing logic
-        parsed_result = []
-        split_input = stringinput.lower().split(",")
 
         for x in split_input:
             if x == '""':

@@ -20,9 +20,11 @@ class TestDataParser(unittest.TestCase):
     # input = "test", , "test"
     # expected output = "test", null, "test"
 
+    # todo - see if Pythong supports options params and implement
+
     def test_missing_null(self):
         """Test for 'missing nulls'"""
-        result = DataParser.parse(self, """ "test","","test" """)
+        result = DataParser.parse(self, "", """ "test","","test" """)
         expected_result = ['\"test\"', '\"null\"', '\"test\"']
 
         self.assertEqual(result, expected_result)
@@ -30,13 +32,19 @@ class TestDataParser(unittest.TestCase):
 
     def test_fixed_casing_to_lower(self):
         """Test for 'missing nulls'"""
-        result = DataParser.parse_to_lower(self, """ "Test","tEst","TeST" """)
+        result = DataParser.parse(self,"l" , """ "Test","tEst","TeST" """)
         expected_result = ['\"test\"', '\"test\"', '\"test\"']
 
         self.assertEqual(result, expected_result)
 
+# params
 
-# casing
+# l = lower,
+# c = caps,
+# n = add in nulls for missing items,
+# b = format booleans,
+# d = remove duplicates
+
 # booleans incorrect
 # duplicate records
 
