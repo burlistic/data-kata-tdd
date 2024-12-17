@@ -20,6 +20,20 @@ class DataParser:
             parsed_result.append(x.strip())
 
         return parsed_result
+    
+    def parseToLower(self, stringinput):
+        """ Parse Method"""
+        # parsing logic
+        parsed_result = []
+        split_input = stringinput.split(",")
+
+        for x in split_input:
+            if x == '""':
+                x = '"null"'
+
+            parsed_result.append(x.strip())
+
+        return parsed_result
 
 # if __name__ == "__main__":
 #     sample_data = "apple,banana,cherry"
