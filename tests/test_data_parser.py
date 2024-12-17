@@ -30,7 +30,7 @@ class TestDataParser(unittest.TestCase):
 
     def test_fixed_casing_to_lower(self):
         """Test for 'missing nulls'"""
-        result = DataParser.parseToLower(self, """ "Test","tEst","TeDT" """)
+        result = DataParser.parse_to_lower(self, """ "Test","tEst","TeST" """)
         expected_result = ['\"test\"', '\"test\"', '\"test\"']
 
         self.assertEqual(result, expected_result)

@@ -7,7 +7,7 @@ class DataParser:
     def __init__(self, data):
         self.data = data
 
-    def parse(self, stringinput):
+    def parse(self, stringinput : str):
         """ Parse Method"""
         # parsing logic
         parsed_result = []
@@ -20,12 +20,12 @@ class DataParser:
             parsed_result.append(x.strip())
 
         return parsed_result
-    
-    def parseToLower(self, stringinput):
+
+    def parse_to_lower(self, stringinput : str):
         """ Parse Method"""
         # parsing logic
         parsed_result = []
-        split_input = stringinput.split(",")
+        split_input = stringinput.lower().split(",")
 
         for x in split_input:
             if x == '""':
