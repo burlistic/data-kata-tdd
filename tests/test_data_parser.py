@@ -14,6 +14,8 @@ from code.data_parser1 import DataParser
 class TestDataParser(unittest.TestCase):
     """Test Class"""
 
+    # todo - see if there is a cleaner way to pass in the strings
+
     # missing nulls
     # input = "test", , "test"
     # expected output = "test", null, "test"
@@ -26,9 +28,13 @@ class TestDataParser(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
 
-# missing fields
-# input = "test", "test"
-# expected output = "test", null, "test"
+    def test_fixed_casing_to_lower(self):
+        """Test for 'missing nulls'"""
+        result = DataParser.parseToLower(self, """ "Test","tEst","TeDT" """)
+        expected_result = ['\"test\"', '\"test\"', '\"test\"']
+
+        self.assertEqual(result, expected_result)
+
 
 # casing
 # booleans incorrect
