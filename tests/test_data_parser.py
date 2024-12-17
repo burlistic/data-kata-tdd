@@ -1,8 +1,15 @@
 # test_data_parser.py
-import unittest
-from data_parser1 import DataParser
-# from data_parser
 
+import unittest
+
+# append not working ???
+# import sys
+# sys.path.append("code")
+
+
+from code.data_parser1 import DataParser
+
+# from data_parser
 
 class Test_TestDataParser(unittest.TestCase):
 
