@@ -37,14 +37,6 @@ class TestDataParser(unittest.TestCase):
 
         self.assertEqual(result, expected_result)
 
-# params
-
-# l = lower,
-# c = caps,
-# n = add in nulls for missing items,
-# b = format booleans,
-# d = remove duplicates
-
 # booleans incorrect
 # duplicate records
 

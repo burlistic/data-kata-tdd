@@ -9,6 +9,16 @@ class DataParser:
 
     def parse(self, param : str, stringinput : str):
         """ Parse Method"""
+
+        # params
+
+            # l = lower,
+            # c = caps,
+            # n = add in nulls for missing items,
+            # b = format booleans,
+            # d = remove duplicates
+
+
         # parsing logic
         parsed_result = []
 
